@@ -1,0 +1,7 @@
+@import '../../../scss/variables';
+
+:host {
+  .flex-container {
+    padding: 0 $space-md;
+  }
+}

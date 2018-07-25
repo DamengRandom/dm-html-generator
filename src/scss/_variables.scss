@@ -1,0 +1,42 @@
+// define common scss variables
+// buttons
+
+
+// font sizes
+$font-xxs: 0.625rem; // 10px
+$font-xs: 0.75rem; // 12px
+$font-sm: 0.875rem; // 14px
+$font-xsm: 1rem; // 16px
+$font-md: 1.125rem; // 18px
+$font-xmd: 1.375rem; // 22px
+$font-lg: 1.75rem; // 28px
+$font-xlg: 2rem; // 32px
+$font-xxlg: 3rem; // 48px
+
+// spaces
+$space-xxs: 0.25rem; // 4px
+$space-xs: 0.5rem; // 8px
+$space-sm: 0.75rem; // 12px
+$space-xsm: 1rem; // 16px
+$space-md: 1.5rem; // 24px
+$space-xmd: 2rem; // 32px
+$space-lg: 1.75rem; // 28px
+$space-xlg: 2rem; // 32px
+$space-xxlg: 3rem; // 48px
+
+
+// mixins 
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin cursorPointer {
+  cursor: pointer;
+}
+
+@mixin blockCenter {
+  display: block;
+  margin: 0 auto;
+}

@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="brand" routerLink="/">{{ title }}</span>
+    <span class="items-spacer"></span>
+    <mat-icon class="menu-icon" [matMenuTriggerFor]="menu">extension</mat-icon>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item
+        *ngFor="let route of routes" 
+        [routerLink]="route.url">
+        {{ route.text }}
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>

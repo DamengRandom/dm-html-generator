@@ -1,0 +1,19 @@
+@import '../../../../scss/variables';
+
+:host {
+  .brand {
+    outline: none;
+    @include cursorPointer;
+  }
+
+  .menu-icon {
+    padding: $space-sm;
+    @include flexCenter;
+    @include cursorPointer;
+  }
+
+  mat-icon {
+    font-size: $font-lg;
+    @include blockCenter;
+  }
+}
