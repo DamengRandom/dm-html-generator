@@ -1,0 +1,7 @@
+@import '../../../../scss/variables';
+
+:host {
+  footer {
+    @include flexCenter;
+  }
+}
