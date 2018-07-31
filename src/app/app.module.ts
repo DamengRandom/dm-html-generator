@@ -2,6 +2,7 @@
 import { AppRoutingModule } from './shared/routes/app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { DisqusModule } from 'ngx-disqus';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule, MatCheckboxModule, MatIconModule, MatMenuModule, MatToolbarModule } from '@angular/material';
 import { NgModule } from '@angular/core';
@@ -15,6 +16,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { IntroPanelComponent } from './pages/dashboard/intro-panel/intro-panel.component';
 import { BackButtonComponent } from './shared/components/back-button/back-button.component';
 import { GeneratorComponent } from './pages/generator/generator.component';
+import { DisqusPanelComponent } from './pages/dashboard/disqus-panel/disqus-panel.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { GeneratorComponent } from './pages/generator/generator.component';
     IntroPanelComponent,
     BackButtonComponent,
     GeneratorComponent,
+    DisqusPanelComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
+    DisqusModule.forRoot('dmtips'),
     FlexLayoutModule,
     MatButtonModule,
     MatCheckboxModule,
