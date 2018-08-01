@@ -16,6 +16,18 @@ body {
 }
 
 // common scss classes
-.items-spacer {
+.flex-spacer {
   flex: 1 1 auto;
+}
+
+// general dialog styling 
+.full-width-dialog {
+  display: flex;
+  flex-direction: column;
+  max-width: none !important;
+  width: 100%;
+  height: 100%;
+  .mat-dialog-container {
+    padding: 0;
+  }
 }
