@@ -40,3 +40,15 @@ $space-xxlg: 3rem; // 48px
   display: block;
   margin: 0 auto;
 }
+
+@mixin alignLeft {
+  text-align: left;
+}
+
+@mixin alignCenter {
+  text-align: center;
+}
+
+@mixin alignRight {
+  text-align: right;
+}

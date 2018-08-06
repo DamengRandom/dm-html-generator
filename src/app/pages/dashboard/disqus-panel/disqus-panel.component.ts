@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./disqus-panel.component.scss']
 })
 export class DisqusPanelComponent implements OnInit {
-
+  pagePath = '/dmhg/discuss';
   constructor() { }
 
   ngOnInit() {

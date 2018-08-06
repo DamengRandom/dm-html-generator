@@ -1,0 +1,9 @@
+<div class="menu-dialog-container" (click)="close()">
+  <mat-icon (click)="close()">close</mat-icon>
+  <mat-list>
+    <mat-list-item *ngFor="let route of routeObs$ | async">
+      <a [routerLink]="route.url">
+      {{ route.text }}</a>
+    </mat-list-item>
+  </mat-list>
+</div>
