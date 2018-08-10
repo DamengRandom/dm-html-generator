@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 
-// menu dialog component
+// components
 import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
 
 @Component({
