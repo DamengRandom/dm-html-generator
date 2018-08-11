@@ -6,39 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exec-cmds.component.scss']
 })
 export class ExecCmdsComponent implements OnInit {
+  commonCommands = ['bold', 'italic', 'strikeThrough', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'insertOrderedList'];
+
   constructor() {}
 
   ngOnInit() {}
 
-  // exec command functions
-  bolderText() {
-    document.execCommand('bold');
+  // common exec command functions
+
+  commonExecCommands(cmd) {
+    document.execCommand(cmd);
   }
 
-  italicText() {
-    document.execCommand('italic');
-  }
-
-  strikeText() {
-    document.execCommand('strikeThrough');
-  }
-
-  textLeft() {
-    document.execCommand('JustifyLeft');
-  }
-
-  textCenter() {
-    document.execCommand('JustifyCenter');
-  }
-
-  textRight() {
-    document.execCommand('JustifyRight');
-  }
-
-  insertOrderedList() {
-    document.execCommand('insertOrderedList');
-  }
-
+  // customised exec command functions
   addImage() {
     const imageUrl = prompt('Please enter your image URL: (Please start with http:// or https:// )');
     if (imageUrl.match(/\.(jpeg|jpg|gif|png)$/) != null) {

@@ -21,6 +21,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { AddingTextComponent } from './pages/generator/adding-text/adding-text.component';
 import { AppComponent } from './app.component';
 import { BackButtonComponent } from './shared/components/back-button/back-button.component';
+import { ContentsPreviewComponent } from './pages/generator/contents-preview/contents-preview.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DisqusPanelComponent } from './pages/dashboard/disqus-panel/disqus-panel.component';
 import { ExecCmdsComponent } from './pages/generator/exec-cmds/exec-cmds.component';
@@ -37,6 +38,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     AddingTextComponent,
     AppComponent,
     BackButtonComponent,
+    ContentsPreviewComponent,
     DashboardComponent,
     DisqusPanelComponent,
     ExecCmdsComponent,
@@ -67,9 +69,11 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
   exports: [
   ],
   entryComponents: [
-    MenuDialogComponent
+    ContentsPreviewComponent,
+    MenuDialogComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {}

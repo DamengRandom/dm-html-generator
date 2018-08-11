@@ -3,3 +3,6 @@
 <button (click)="addHeading()">Set Heading</button>
 <button (click)="addHighLight()">Highlight Text</button>
 <button (click)="addCodePiece()">Piece of Code</button>
+<button *ngFor="let cmd of commonCommands" (click)="commonExecCommands(cmd)">
+  {{ cmd }}
+</button>

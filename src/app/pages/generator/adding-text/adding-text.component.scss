@@ -6,5 +6,15 @@
 .text-div-node {
   width: 100%;
   min-height: 24px;
+}
+
+.text-div-node:focus {
+  outline: none;
+  border: none;
   border-bottom: 1px solid #ddd;
+}
+
+[contenteditable=true]:first-child:empty:before{
+  content: attr(placeholder);
+  display: block; /* For Firefox */
 }
