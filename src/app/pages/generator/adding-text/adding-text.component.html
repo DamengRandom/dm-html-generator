@@ -1,8 +1,13 @@
-<div>
-    <button (click)="addText()">add</button>
-    <button (click)="clearText()">clear</button>
-    <button (click)="openPreview()">Preview</button>    
+<div class="operators-panel">
+	<button mat-button (click)="addNode()">
+		<i class="fas fa-pen-square"></i>
+	</button>
+	<button mat-button (click)="clearNode()" [disabled]="!disableButton">
+		<i class="fas fa-eraser"></i>	
+	</button>
+	<button mat-button (click)="openPreview()" [disabled]="!disableButton">
+		<i class="fas fa-file-alt"></i>
+	</button>
+	<app-exec-cmds *ngIf="disableButton"></app-exec-cmds>
 </div>
-<div id="paper"></div>
-
- 
+<div id="paper" class="contents-panel"></div>

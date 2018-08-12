@@ -1,8 +1,18 @@
-<button (click)="addImage()">Insert Image</button>
-<button (click)="addLink()">Add Link</button>
-<button (click)="addHeading()">Set Heading</button>
-<button (click)="addHighLight()">Highlight Text</button>
-<button (click)="addCodePiece()">Piece of Code</button>
-<button *ngFor="let cmd of commonCommands" (click)="commonExecCommands(cmd)">
-  {{ cmd }}
+<button mat-button (click)="addImage()">
+  <i class="fas fa-file-image"></i>
+</button>
+<button mat-button (click)="addLink()">
+  <i class="fas fa-link"></i>
+</button>
+<button mat-button (click)="addHeading()">
+  <i class="fas fa-heading"></i>
+</button>
+<button mat-button (click)="addHighLight()">
+  <i class="fas fa-highlighter"></i>
+</button>
+<button mat-button (click)="addCodePiece()">
+  <i class="fas fa-code"></i>
+</button>
+<button mat-button *ngFor="let cmd of comamndsData;" (click)="commonExecCommands(cmd.name)">
+  <i [ngClass]="[ 'fas', 'fa-' + cmd.icon ]"></i>
 </button>
