@@ -6,14 +6,42 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exec-cmds.component.scss']
 })
 export class ExecCmdsComponent implements OnInit {
-  commonCommands = ['bold', 'italic', 'strikeThrough', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'insertOrderedList'];
+  comamndsData = [
+    {
+      icon: 'bold',
+      name: 'bold'
+    },
+    {
+      icon: 'italic',
+      name: 'italic'
+    },
+    {
+      icon: 'strikethrough',
+      name: 'strikeThrough'
+    },
+    {
+      icon: 'align-left',
+      name: 'alignLeft'
+    },
+    {
+      icon: 'align-center',
+      name: 'justifyCenter'
+    },
+    {
+      icon: 'align-right',
+      name: 'alignRight'
+    },
+    {
+      icon: 'list-ol',
+      name: 'insertOrderedList'
+    }
+  ];
 
   constructor() {}
 
   ngOnInit() {}
 
   // common exec command functions
-
   commonExecCommands(cmd) {
     document.execCommand(cmd);
   }
@@ -22,8 +50,7 @@ export class ExecCmdsComponent implements OnInit {
   addImage() {
     const imageUrl = prompt('Please enter your image URL: (Please start with http:// or https:// )');
     if (imageUrl.match(/\.(jpeg|jpg|gif|png)$/) != null) {
-      // document.execCommand('insertImage', false, imageUrl);
-      document.execCommand('insertHTML', false, `<img src=${imageUrl} alt="image" />`);
+      document.execCommand('insertHTML', false, `<img style="width: 100%;" src=${imageUrl} alt="image" />`);
     } else {
       alert('Invlaid URL ..');
     }

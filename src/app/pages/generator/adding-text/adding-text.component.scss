@@ -1,20 +1,42 @@
-// custom css
-.text-title-node {
-  display: none;
+@import '../../../../scss/variables';
+
+.operators-panel {
+  padding: $font-xlg;
+
+  .fas {
+    font-size: $font-lg;
+  }
 }
 
-.text-div-node {
-  width: 100%;
-  min-height: 24px;
+.contents-panel {
+  padding: $font-xlg $font-xlg*2;
+
+  .text-div-node {
+    width: 100%;
+    min-height: $space-lg;
+    line-height: $space-lg;
+    word-break: break-all;
+  }
+  
+  .text-div-node:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $border-light;
+  }
+  
+  [contenteditable=true]:first-child:empty:before {
+    content: attr(placeholder);
+    display: block;
+    color: $placeholder;
+  }
+
+  .delete-icon {
+    font-size: $font-xmd;
+    float: right;
+    cursor: pointer;
+  } 
 }
 
-.text-div-node:focus {
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #ddd;
-}
-
-[contenteditable=true]:first-child:empty:before{
-  content: attr(placeholder);
-  display: block; /* For Firefox */
+.hide {
+  display: none !important;
 }
