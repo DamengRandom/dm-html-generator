@@ -32,6 +32,9 @@ import { IntroPanelComponent } from './pages/dashboard/intro-panel/intro-panel.c
 import { MenuDialogComponent } from './shared/components/header/menu-dialog/menu-dialog.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
+// services
+// import { BackButtonService } from '../app/services/back-button.service';
+
 @NgModule({
   declarations: [
     AboutComponent,
@@ -66,12 +69,12 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     MatMenuModule,
     MatToolbarModule,
   ],
-  exports: [
-  ],
+  exports: [],
   entryComponents: [
     ContentsPreviewComponent,
     MenuDialogComponent,
   ],
+  // providers: [BackButtonService],
   providers: [],
   bootstrap: [AppComponent]
 })

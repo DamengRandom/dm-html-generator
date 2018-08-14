@@ -66,8 +66,6 @@ export class AddingTextComponent {
     this.htmlContent = document.getElementById('paper').innerHTML;
 
     const dialogRef = this.dialog.open(ContentsPreviewComponent, {
-      width: '100vh',
-      height: '100vh',
       data: { htmlContent: this.htmlContent }
     });
 

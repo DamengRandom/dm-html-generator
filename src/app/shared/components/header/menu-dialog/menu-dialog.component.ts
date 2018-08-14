@@ -1,7 +1,7 @@
-import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
+
 @Component({
   selector: 'app-menu-dialog',
   templateUrl: './menu-dialog.component.html',

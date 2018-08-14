@@ -2,6 +2,7 @@
   <mat-toolbar-row>
     <span class="brand" routerLink="/">{{ title }}</span>
     <span class="flex-spacer"></span>
+    <app-back-button *ngIf="!backButtonDisplay()"></app-back-button>
     <mat-icon class="menu-icon" (click)="openMenu()">extension</mat-icon>
   </mat-toolbar-row>
 </mat-toolbar>
